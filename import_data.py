@@ -14,7 +14,7 @@ FILE_NAME = [
 
 for strg in FILE_NAME:
 
-    with open("/Users/fox/Documents/TX/Interactions/" + strg, "r", encoding="Latin-1") as csvFile:
+    with open("/Users/fox/Documents/TX/TX_Big_Data/data/" + strg, "r", encoding="Latin-1") as csvFile:
         csvReader = csv.reader(csvFile)
 
         i = 0

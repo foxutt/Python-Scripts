@@ -1,11 +1,10 @@
 import csv
 import pandas
 import random
-import numpy as np
-from sklearn.cluster import KMeans
+
 
 def importDataset(strg):
-    with open("/Users/nicolas/downloads/TPE_UTT_Documents_Sources/interactions/" + strg, "r", encoding="Latin-1") as csvFile:
+    with open("/Users/fox/Documents/TX/TX_Big_Data/data/" + strg, "r", encoding="Latin-1") as csvFile:
         csvReader = csv.reader(csvFile, delimiter = ';', quotechar = '"')
         i = 0
         tab = []
@@ -61,7 +60,6 @@ for k in random.sample(range(0, join.shape[0]), NB_RANDOM_ROWS):
         num += 1
 
         clientDate = client.loc[:, "HORODATE_x"]
-        npClient = clientDate.as_matrix()
-        km = KMeans(n_clusters=3).fit(npClient)
+
 
 print(num)
